@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sameh Abdeltawab | QA Automation Engineer</title>
+  <meta name="description" content="Professional portfolio of Sameh Abdeltawab — QA Automation Engineer specializing in test automation, CI/CD, API testing, and quality engineering." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">QA<span class="logo-accent">Engineer</span></span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#contact" class="nav-btn">Hire Me</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for new opportunities
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="highlight">Sameh Abdeltawab</span>
+        </h1>
+        <h2 class="hero-subtitle">
+          <span class="typed-text" id="typed"></span><span class="cursor">|</span>
+        </h2>
+        <p class="hero-description">
+          I build robust, scalable test automation frameworks that help engineering teams 
+          ship with confidence. Passionate about quality at every stage of the SDLC — 
+          from unit tests to end-to-end pipelines.
+        </p>
+        <div class="hero-tags">
+          <span class="tag"><i class="fas fa-robot"></i> Test Automation</span>
+          <span class="tag"><i class="fas fa-code-branch"></i> CI/CD Pipelines</span>
+          <span class="tag"><i class="fas fa-plug"></i> API Testing</span>
+          <span class="tag"><i class="fas fa-desktop"></i> UI Testing</span>
+          <span class="tag"><i class="fas fa-tachometer-alt"></i> Performance</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-folder-open"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> Get in Touch
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">8+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">2000+</span>
+            <span class="stat-label">Test Suites Built</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">98%</span>
+            <span class="stat-label">Pipeline Pass Rate</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+      <div class="code-window">
+        <div class="code-titlebar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="code-filename">test_suite.py</span>
+        </div>
+        <pre class="code-block"><code><span class="kw">import</span> pytest
+<span class="kw">from</span> selenium <span class="kw">import</span> webdriver
+<span class="kw">from</span> pages <span class="kw">import</span> LoginPage
+
+<span class="decorator">@pytest.fixture</span>
+<span class="kw">def</span> <span class="fn">driver</span>():
+    d = webdriver.Chrome()
+    <span class="kw">yield</span> d
+    d.quit()
+
+<span class="decorator">@pytest.mark.smoke</span>
+<span class="kw">def</span> <span class="fn">test_login_success</span>(driver):
+    page = LoginPage(driver)
+    page.open()
+    page.login(<span class="str">"admin"</span>, <span class="str">"secret"</span>)
+    <span class="kw">assert</span> page.is_logged_in()
+    <span class="cm"># ✅ PASSED — 0.34s</span>
+
+<span class="decorator">@pytest.mark.regression</span>
+<span class="kw">def</span> <span class="fn">test_api_response</span>():
+    res = requests.get(<span class="str">"/api/v1/status"</span>)
+    <span class="kw">assert</span> res.status_code == <span class="num">200</span>
+    <span class="cm"># ✅ PASSED — 0.12s</span></code></pre>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 01. about_me</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Quality engineering with a developer's mindset</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <div class="about-avatar">
+            <div class="avatar-photo">
+              <img src="https://www.genspark.ai/api/files/s/Uwt14isV" alt="Sameh Abdeltawab" />
+            </div>
+            <div class="avatar-badge">
+              <i class="fas fa-shield-halved"></i>
+              <span>QA Engineer</span>
+            </div>
+          </div>
+          <div class="about-info-cards">
+            <div class="info-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>[Your Location]</span>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-briefcase"></i>
+              <span>Open to Remote</span>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-graduation-cap"></i>
+              <span>B.Sc. Computer Science</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <p class="about-text">
+            I'm a <strong>QA Automation Engineer</strong> with 5+ years of experience designing and 
+            building test automation frameworks for web, mobile, and API-driven applications. 
+            I bridge the gap between development and quality, embedding testing best practices 
+            directly into the engineering workflow.
+          </p>
+          <p class="about-text">
+            My approach goes beyond writing scripts — I architect <strong>maintainable, data-driven 
+            frameworks</strong> using tools like Selenium, Playwright, Cypress, and RestAssured. 
+            I integrate these into CI/CD pipelines with Jenkins, GitHub Actions, and GitLab CI 
+            to provide fast, reliable feedback loops to development teams.
+          </p>
+          <p class="about-text">
+            I'm passionate about <strong>shift-left testing</strong>, advocating for quality from 
+            requirements through deployment. I collaborate closely with developers, product managers, 
+            and DevOps to ensure that every release meets the highest standards.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Test Strategy & Framework Design</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>CI/CD Integration & Pipeline Optimization</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Cross-functional Collaboration</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Bug Advocacy & Root Cause Analysis</span>
+            </div>
+          </div>
+          <div class="about-actions">
+            <a href="https://drive.google.com/file/d/1KO2Sk4n5l4V6gb1qjeGY_2SxuHvLsVDn/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <a href="#skills" class="btn btn-ghost">
+              <i class="fas fa-arrow-right"></i> View Skills
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 02. skills</span>
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Tools, frameworks, and methodologies I work with daily</p>
+      </div>
+
+      <div class="skills-categories">
+
+        <!-- Test Automation -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-robot"></i></div>
+            <h3>Test Automation</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag expert">Selenium WebDriver</span>
+            <span class="skill-tag expert">Playwright</span>
+            <span class="skill-tag expert">Cypress</span>
+            <span class="skill-tag advanced">Appium</span>
+            <span class="skill-tag advanced">TestNG</span>
+            <span class="skill-tag advanced">JUnit 5</span>
+            <span class="skill-tag advanced">pytest</span>
+            <span class="skill-tag intermediate">Robot Framework</span>
+          </div>
+        </div>
+
+        <!-- API Testing -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-plug"></i></div>
+            <h3>API & Backend Testing</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag expert">RestAssured</span>
+            <span class="skill-tag expert">Postman / Newman</span>
+            <span class="skill-tag advanced">REST / GraphQL</span>
+            <span class="skill-tag advanced">Karate DSL</span>
+            <span class="skill-tag advanced">WireMock</span>
+            <span class="skill-tag intermediate">gRPC Testing</span>
+            <span class="skill-tag intermediate">Pact (Contract Testing)</span>
+          </div>
+        </div>
+
+        <!-- CI/CD & DevOps -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-code-branch"></i></div>
+            <h3>CI/CD & DevOps</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag expert">GitHub Actions</span>
+            <span class="skill-tag expert">Jenkins</span>
+            <span class="skill-tag advanced">GitLab CI/CD</span>
+            <span class="skill-tag advanced">Docker</span>
+            <span class="skill-tag advanced">Kubernetes (basic)</span>
+            <span class="skill-tag intermediate">AWS (EC2, S3)</span>
+            <span class="skill-tag intermediate">Terraform (basic)</span>
+          </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag expert">Java</span>
+            <span class="skill-tag expert">Python</span>
+            <span class="skill-tag advanced">JavaScript / TypeScript</span>
+            <span class="skill-tag advanced">Bash / Shell</span>
+            <span class="skill-tag intermediate">Go (basic)</span>
+            <span class="skill-tag intermediate">SQL</span>
+          </div>
+        </div>
+
+        <!-- Performance Testing -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <h3>Performance & Security</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag advanced">JMeter</span>
+            <span class="skill-tag advanced">k6</span>
+            <span class="skill-tag advanced">Gatling</span>
+            <span class="skill-tag intermediate">Lighthouse CI</span>
+            <span class="skill-tag intermediate">OWASP ZAP</span>
+            <span class="skill-tag intermediate">Burp Suite (basic)</span>
+          </div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag expert">Jira / Xray</span>
+            <span class="skill-tag expert">Git / GitHub</span>
+            <span class="skill-tag advanced">Allure Reports</span>
+            <span class="skill-tag advanced">TestRail</span>
+            <span class="skill-tag advanced">Selenium Grid</span>
+            <span class="skill-tag advanced">BrowserStack</span>
+            <span class="skill-tag intermediate">Grafana / Kibana</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Proficiency Legend -->
+      <div class="legend">
+        <span class="legend-title">Proficiency:</span>
+        <span class="skill-tag expert">Expert</span>
+        <span class="skill-tag advanced">Advanced</span>
+        <span class="skill-tag intermediate">Intermediate</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 03. projects</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Automation frameworks and quality engineering solutions</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="project-links">
+              <a href="#" title="GitHub" onclick="return false;"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo" onclick="return false;"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-badge">Featured</div>
+          <h3 class="project-title">E2E Automation Framework</h3>
+          <p class="project-desc">
+            Built a scalable Page Object Model framework using Selenium WebDriver + TestNG + Java. 
+            Integrates with Jenkins CI, generates Allure reports, and runs cross-browser on Selenium Grid. 
+            Reduced regression cycle time by <strong>70%</strong>.
+          </p>
+          <div class="project-metrics">
+            <div class="metric"><i class="fas fa-vial"></i> 450+ test cases</div>
+            <div class="metric"><i class="fas fa-clock"></i> 70% faster regression</div>
+            <div class="metric"><i class="fas fa-check"></i> 98% pass rate</div>
+          </div>
+          <div class="project-stack">
+            <span>Java</span><span>Selenium</span><span>TestNG</span><span>Jenkins</span><span>Allure</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-plug"></i></div>
+            <div class="project-links">
+              <a href="#" title="GitHub" onclick="return false;"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo" onclick="return false;"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">API Test Automation Suite</h3>
+          <p class="project-desc">
+            Designed a comprehensive REST API test suite using RestAssured and Python Requests. 
+            Covers authentication flows, CRUD operations, error handling, and contract testing with Pact. 
+            Integrated into GitHub Actions for every PR.
+          </p>
+          <div class="project-metrics">
+            <div class="metric"><i class="fas fa-vial"></i> 300+ API tests</div>
+            <div class="metric"><i class="fas fa-bolt"></i> Runs in &lt;3 min</div>
+            <div class="metric"><i class="fas fa-shield-alt"></i> Contract tested</div>
+          </div>
+          <div class="project-stack">
+            <span>Python</span><span>RestAssured</span><span>Pact</span><span>GitHub Actions</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
+            <div class="project-links">
+              <a href="#" title="GitHub" onclick="return false;"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo" onclick="return false;"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Mobile Test Automation (iOS & Android)</h3>
+          <p class="project-desc">
+            Developed a cross-platform mobile automation framework with Appium + Python. 
+            Supports iOS and Android on real devices and BrowserStack. 
+            Includes gesture simulation, deep link testing, and push notification validation.
+          </p>
+          <div class="project-metrics">
+            <div class="metric"><i class="fas fa-mobile-alt"></i> iOS + Android</div>
+            <div class="metric"><i class="fas fa-vial"></i> 180+ test cases</div>
+            <div class="metric"><i class="fas fa-cloud"></i> BrowserStack CI</div>
+          </div>
+          <div class="project-stack">
+            <span>Python</span><span>Appium</span><span>iOS</span><span>Android</span><span>BrowserStack</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <div class="project-links">
+              <a href="#" title="GitHub" onclick="return false;"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo" onclick="return false;"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Performance Testing Pipeline</h3>
+          <p class="project-desc">
+            Implemented a performance testing pipeline using k6 and Grafana dashboards. 
+            Automated load, stress, and soak tests run nightly, with threshold alerts 
+            preventing performance regressions from reaching production.
+          </p>
+          <div class="project-metrics">
+            <div class="metric"><i class="fas fa-users"></i> 10K+ VU simulated</div>
+            <div class="metric"><i class="fas fa-chart-line"></i> Grafana dashboards</div>
+            <div class="metric"><i class="fas fa-bell"></i> Auto alerting</div>
+          </div>
+          <div class="project-stack">
+            <span>k6</span><span>JavaScript</span><span>Grafana</span><span>InfluxDB</span><span>Jenkins</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-seedling"></i></div>
+            <div class="project-links">
+              <a href="#" title="GitHub" onclick="return false;"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo" onclick="return false;"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">BDD Automation with Cucumber</h3>
+          <p class="project-desc">
+            Created a BDD test framework using Cucumber + Java + Playwright. 
+            Product and QA teams co-author feature files in Gherkin, enabling living 
+            documentation and enabling non-technical stakeholders to review test coverage.
+          </p>
+          <div class="project-metrics">
+            <div class="metric"><i class="fas fa-file-alt"></i> 200+ feature files</div>
+            <div class="metric"><i class="fas fa-users"></i> Cross-team collab</div>
+            <div class="metric"><i class="fas fa-book"></i> Living docs</div>
+          </div>
+          <div class="project-stack">
+            <span>Java</span><span>Playwright</span><span>Cucumber</span><span>Gherkin</span><span>Maven</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="project-links">
+              <a href="#" title="GitHub" onclick="return false;"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo" onclick="return false;"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">CI/CD Quality Gate System</h3>
+          <p class="project-desc">
+            Designed a multi-stage quality gate system in GitLab CI that blocks deployments 
+            when code coverage drops, critical tests fail, or vulnerability scans detect issues. 
+            Adopted as the org-wide standard pipeline template.
+          </p>
+          <div class="project-metrics">
+            <div class="metric"><i class="fas fa-ban"></i> Zero broken deploys</div>
+            <div class="metric"><i class="fas fa-building"></i> Org-wide adoption</div>
+            <div class="metric"><i class="fas fa-shield-alt"></i> Security integrated</div>
+          </div>
+          <div class="project-stack">
+            <span>GitLab CI</span><span>Docker</span><span>OWASP ZAP</span><span>SonarQube</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS SECTION ===== -->
+  <section class="section section-alt" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 04. achievements</span>
+        <h2 class="section-title">Achievements & Certifications</h2>
+        <p class="section-subtitle">Recognition, certifications, and professional milestones</p>
+      </div>
+
+      <div class="achievements-layout">
+
+        <!-- Certifications -->
+        <div class="achievements-column">
+          <h3 class="achievements-col-title"><i class="fas fa-certificate"></i> Certifications</h3>
+          <div class="cert-list">
+            <div class="cert-card reveal">
+              <div class="cert-logo"><i class="fas fa-award"></i></div>
+              <div class="cert-info">
+                <h4>ISTQB Certified Tester — Foundation Level</h4>
+                <span class="cert-issuer">ISTQB</span>
+                <span class="cert-date">2021</span>
+              </div>
+              <div class="cert-badge verified"><i class="fas fa-check"></i></div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-logo"><i class="fas fa-award"></i></div>
+              <div class="cert-info">
+                <h4>ISTQB Advanced Level — Test Automation Engineer</h4>
+                <span class="cert-issuer">ISTQB</span>
+                <span class="cert-date">2022</span>
+              </div>
+              <div class="cert-badge verified"><i class="fas fa-check"></i></div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-logo"><i class="fab fa-aws"></i></div>
+              <div class="cert-info">
+                <h4>AWS Certified Developer — Associate</h4>
+                <span class="cert-issuer">Amazon Web Services</span>
+                <span class="cert-date">2023</span>
+              </div>
+              <div class="cert-badge verified"><i class="fas fa-check"></i></div>
+            </div>
+            <div class="cert-card reveal">
+              <div class="cert-logo"><i class="fas fa-infinity"></i></div>
+              <div class="cert-info">
+                <h4>Certified DevOps Practitioner</h4>
+                <span class="cert-issuer">DevOps Institute</span>
+                <span class="cert-date">2023</span>
+              </div>
+              <div class="cert-badge verified"><i class="fas fa-check"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestones & Awards -->
+        <div class="achievements-column">
+          <h3 class="achievements-col-title"><i class="fas fa-trophy"></i> Milestones & Recognition</h3>
+          <div class="milestone-list">
+            <div class="milestone-card reveal">
+              <div class="milestone-icon gold"><i class="fas fa-trophy"></i></div>
+              <div class="milestone-content">
+                <h4>Quality Champion Award</h4>
+                <p>Recognized company-wide for reducing production bug escape rate by 85% through automated regression coverage.</p>
+                <span class="milestone-year">2024</span>
+              </div>
+            </div>
+            <div class="milestone-card reveal">
+              <div class="milestone-icon teal"><i class="fas fa-rocket"></i></div>
+              <div class="milestone-content">
+                <h4>Led Migration to Playwright</h4>
+                <p>Spearheaded the migration of 400+ legacy Selenium tests to Playwright, reducing flakiness by 60% and execution time by 45%.</p>
+                <span class="milestone-year">2023</span>
+              </div>
+            </div>
+            <div class="milestone-card reveal">
+              <div class="milestone-icon purple"><i class="fas fa-users"></i></div>
+              <div class="milestone-content">
+                <h4>QA Guild Founder</h4>
+                <p>Founded and led a cross-team QA Guild of 12 engineers, standardizing testing practices across 5 product teams.</p>
+                <span class="milestone-year">2022</span>
+              </div>
+            </div>
+            <div class="milestone-card reveal">
+              <div class="milestone-icon blue"><i class="fas fa-microphone"></i></div>
+              <div class="milestone-content">
+                <h4>Speaker — TestCon Europe</h4>
+                <p>Delivered a talk on "Scaling Test Automation in Microservices Architectures" at an international QA conference.</p>
+                <span class="milestone-year">2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="stats-bar">
+        <div class="stats-item reveal">
+          <span class="stats-num" data-target="85">0</span><span class="stats-unit">%</span>
+          <span class="stats-desc">Reduction in bug escapes</span>
+        </div>
+        <div class="stats-item reveal">
+          <span class="stats-num" data-target="70">0</span><span class="stats-unit">%</span>
+          <span class="stats-desc">Faster regression cycles</span>
+        </div>
+        <div class="stats-item reveal">
+          <span class="stats-num" data-target="1000">0</span><span class="stats-unit">+</span>
+          <span class="stats-desc">Automated test cases</span>
+        </div>
+        <div class="stats-item reveal">
+          <span class="stats-num" data-target="5">0</span><span class="stats-unit">+</span>
+          <span class="stats-desc">Years of QA experience</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 05. contact</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Open to new roles, freelance projects, and collaborations</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <p class="contact-intro">
+            Whether you're looking for a QA Automation Engineer to join your team, 
+            need a consultation on your testing strategy, or want to collaborate on 
+            an open-source project — I'd love to hear from you!
+          </p>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:[your@email.com]">
+              <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-value">[your@email.com]</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+            <a class="contact-link" href="https://linkedin.com/in/[your-profile]" target="_blank">
+              <div class="contact-link-icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">linkedin.com/in/[your-profile]</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+            <a class="contact-link" href="https://github.com/[your-username]" target="_blank">
+              <div class="contact-link-icon github"><i class="fab fa-github"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">github.com/[your-username]</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+            <div class="contact-link static">
+              <div class="contact-link-icon location"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">Location</span>
+                <span class="contact-link-value">[Your City, Country] · Open to Remote</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#hero" class="footer-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">QA<span class="logo-accent">Engineer</span></span>
+          <span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-tagline">Building quality into every line of code.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/[your-username]" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/[your-profile]" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:[your@email.com]" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://twitter.com/[your-handle]" target="_blank" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> <strong>Sameh Abdeltawab</strong> — QA Automation Engineer</p>
+        <p class="footer-credit">Designed & built with <i class="fas fa-heart"></i> and a lot of <i class="fas fa-vial"></i> tests</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Main Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
